@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Input-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Input" id="BYZ-38-t0r" customClass="ViewController" customModule="FoodDice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZo-N5-P8d" userLabel="PriceSelect">
+                                <rect key="frame" x="27.666666666666657" y="94" width="320" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="hvU-zO-y87"/>
+                                    <constraint firstAttribute="height" constant="162" id="yZE-sk-liH"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGX-NP-OVW" userLabel="FoodTypeSelect">
+                                <rect key="frame" x="27.666666666666657" y="306" width="320" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="oVb-s9-ruD"/>
+                                    <constraint firstAttribute="height" constant="162" id="p8b-Uo-9tw"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGT-kU-hDi" userLabel="Res Name">
+                                <rect key="frame" x="27.666666666666657" y="548" width="320" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="2uf-GL-Rfl"/>
+                                    <constraint firstAttribute="width" constant="320" id="apw-AW-dTg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQe-op-TAG" userLabel="Gen Menu">
+                                <rect key="frame" x="147.66666666666666" y="648" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="mSX-6g-bpJ"/>
+                                    <constraint firstAttribute="width" constant="80" id="meW-TL-T6a"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="fLf-Kf-fHt" kind="show" id="Bjs-zD-mXD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZQe-op-TAG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TDv-GX-0dy"/>
+                            <constraint firstItem="yZo-N5-P8d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="afK-9d-9ei"/>
+                            <constraint firstItem="JGX-NP-OVW" firstAttribute="top" secondItem="yZo-N5-P8d" secondAttribute="bottom" constant="50" id="fYe-YW-fC7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZQe-op-TAG" secondAttribute="bottom" constant="50" id="iPk-vx-gXI"/>
+                            <constraint firstItem="ZQe-op-TAG" firstAttribute="top" secondItem="cGT-kU-hDi" secondAttribute="bottom" constant="20" id="j8w-72-tW5"/>
+                            <constraint firstItem="cGT-kU-hDi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sky-gh-qkO"/>
+                            <constraint firstItem="JGX-NP-OVW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yQA-Oj-Vq1"/>
+                            <constraint firstItem="yZo-N5-P8d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="zzG-Af-Olt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="FoodTypeSelect" destination="JGX-NP-OVW" id="ehv-sH-jbO"/>
+                        <outlet property="GenMenu" destination="ZQe-op-TAG" id="XCp-DM-URI"/>
+                        <outlet property="PriceSelect" destination="yZo-N5-P8d" id="QlF-pp-62e"/>
+                        <outlet property="ResName" destination="cGT-kU-hDi" id="tdW-nL-ffc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="95.320197044334975"/>
+        </scene>
+        <!--Result-->
+        <scene sceneID="BxJ-wc-tLd">
+            <objects>
+                <viewController title="Result" id="fLf-Kf-fHt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IUo-de-STo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FOK-xh-XvH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="K57-Gg-zC8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zI1-nP-sbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-439" y="-585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
