@@ -118,45 +118,45 @@ class ViewController:
         if (checktype == 1) {
             if (checkprice == 0) {
                 jplow.shuffle()
-                self.ResName.text = cnlow[0]
+                self.ResName.text = jplow[0]
             }
             else if (checkprice == 1) {
                 jpmid.shuffle()
-                self.ResName.text = cnmid[0]
+                self.ResName.text = jpmid[0]
             }
             else if (checkprice == 2) {
                 jphigh .shuffle()
-                self.ResName.text = cnhigh[0]
+                self.ResName.text = jphigh[0]
             }
         }
         
         if (checktype == 2) {
             if (checkprice == 0) {
                 uslow.shuffle()
-                self.ResName.text = cnlow[0]
+                self.ResName.text = uslow[0]
             }
             else if (checkprice == 1) {
                 usmid.shuffle()
-                self.ResName.text = cnmid[0]
+                self.ResName.text = usmid[0]
             }
             else if (checkprice == 2) {
                 ushigh .shuffle()
-                self.ResName.text = cnhigh[0]
+                self.ResName.text = ushigh[0]
             }
         }
         
         if (checktype == 3) {
             if (checkprice == 0) {
                 otherlow.shuffle()
-                self.ResName.text = cnlow[0]
+                self.ResName.text = otherlow[0]
             }
             else if (checkprice == 1) {
                 othermid.shuffle()
-                self.ResName.text = cnmid[0]
+                self.ResName.text = othermid[0]
             }
             else if (checkprice == 2) {
-                otherhigh .shuffle()
-                self.ResName.text = cnhigh[0]
+                otherhigh.shuffle()
+                self.ResName.text = otherhigh[0]
             }
         }
     }
